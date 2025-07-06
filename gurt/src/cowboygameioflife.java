@@ -1,35 +1,41 @@
 import java.util.Random;
 
 public class cowboygameioflife {
-
-    private static void bord(String[][] red){
+    private static String[][] pigeonSmith(String[][] gurt){
         for(int x=0; x<30; x++){
+            for(int d=0; d<30; d++){
+                int randing=(int)(5*Math.random())+1;
+                if(randing==3){
+                gurt[x][d]="O ";
+                }   
+            }
+        }
+        return gurt;
+    }
+    private static void printBored(String[][] jackFein){
+        for(String[] x: jackFein){
             System.out.println(" ");
-            for(int y=0; y<30; y++){
-                red[x][y]=("- ");
-                System.out.print(red[x][y]);
+            for(String y: x){
+                System.out.print(y);
+
             }
         }
     }
-    private static void pigeonsmith(String[][] gurt){
-    Random r= new Random();
-    r.nextInt(5);
- int y=r.nextInt(5);
- for(int x=0; x<30; x++){
-        for(int d=0; d<30; d++){
- if(y==3){
-    
-         gurt[x][y]="O ";
-        }
-        
-    }
+    private static String[][] updateBoard(String[][] board){
 
- }
     }
     public static void main(String[] args) {
         String[][] bored=new String[30][30];
-        bord(bored);
-        pigeonsmith(bored);
+        for(int x=0; x<30; x++){
+            System.out.println(" ");
+            for(int y=0; y<30; y++){
+                bored[x][y]=("- ");
+               
+            }
+        }
+        bored = pigeonSmith(bored);
+         printBored(bored);
+        
     }
     
 }
