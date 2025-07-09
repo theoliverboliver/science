@@ -1,36 +1,42 @@
 public class Card {
     private String suit;
-    private int numb;
-
-    public Card(String suit, int numb){
+    private int number;
+    
+    public Card(String suit, int number){
         this.suit=suit;
-        this.numb=numb;
+        this.number=number;
+    }
+    public Card(){
+        this.suit="spades";
+        this.number= 6;
     }
     public String getSuit(){
         return this.suit;
     }
-    public int getNumb(){
-        return this.numb;
+    public void setSuit(String x){
+        this.suit=x;
     }
-    public void setSuit(String suit2){
-        this.suit=suit2;
+    public int getNumber(){
+        return this.number;
     }
-    public void setNumb(int numb2){
-        this.numb=numb2; 
+    public void setNumber(int z){
+        this.number=z;
     }
     public String toString(){
-        if(numb==1){
-            return "ace of "+suit;
+        if(number==1){
+            return "ace of " + suit;
         }
-        if(numb==11){
+        if(number==11){
             return "jack of " + suit;
         }
-         if(numb==12){
+        if(number==12){
             return "queen of " + suit;
-        }
-         if(numb==13){
+             }
+        if(number==13){
             return "king of " + suit;
         }
-         return numb+" of "+suit;
+       
+        return number + " of " + suit;
     }
+    
 }
