@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 public class Deck {
-    private ArrayList<Card> deck;
+    public ArrayList<Card> deck;
 
     public Deck(){
         deck = new ArrayList<Card>();
@@ -36,5 +36,8 @@ public class Deck {
         for(Card xvur: deck){
             System.out.println(xvur);
         }
-    }         
+    }      
+    public ArrayList<Card> getter(){
+        return deck;
+    }
 }
